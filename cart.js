@@ -12,13 +12,25 @@ function divTrajet(obj,id) {
   return trajet;
 }
 
-fetch("http://localhost:3000/reservations/recup")
+fetch("http://localhost:3000/reservations/recup/false")
   .then((response) => response.json())
   .then((data) => {
     document.querySelector("#resultat").innerHTML = "";
+
+
+
     for (let obj of data.recup) {
       let newDiv = divTrajet(obj.trip,obj._id);
       document.querySelector("#resultat").innerHTML += newDiv;
+    }
+    document.querySelector("#end").style.display ="none";
+    
+    if (data.recup.length === 0){
+        document.querySelector("#end").textContent = "Why not plan a Trip ?";
+        document.querySelector("#end").style.display = "block";
+
+        document.querySelector("#resultat").textContent = "No tickets in your cart."
+        document.querySelector(".total").style.display ="none";
     }
 
     for (let button of document.querySelectorAll("#resultat button")) {
@@ -32,6 +44,15 @@ fetch("http://localhost:3000/reservations/recup")
             .then(data =>{
                 console.log(data);
                 button.parentElement.remove();
+                if (document.querySelectorAll("#resultat button").length === 0){
+                        document.querySelector("#end").textContent = "Why not plan a Trip ?";
+                        document.querySelector("#end").style.display = "block";
+
+                        document.querySelector("#resultat").textContent = "No tickets in your cart."
+                        document.querySelector(".total").style.display ="none";
+                }
+
+
             } )
       });
     }
