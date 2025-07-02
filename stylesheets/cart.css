@@ -1,0 +1,24 @@
+* {
+    border:1px solid black;
+}
+.myCart{
+    text-align: center;
+    width:60%; 
+    margin: auto;
+}
+
+.contTrajets{
+    background-color: #fefefe;
+}
+
+.total {
+    background-color:#00153e ;
+    color:#fefefe ;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerTrajets{
+    background-color: #f5eeee;
+}
