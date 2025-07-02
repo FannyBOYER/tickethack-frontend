@@ -115,6 +115,7 @@ h2 {
 .trajet {
     display : flex;
     justify-content : space-between;
+    align-items: center;
 }
 
 #results {

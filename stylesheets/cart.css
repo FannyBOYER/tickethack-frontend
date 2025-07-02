@@ -1,10 +1,16 @@
 /** {
     border:1px solid black;
 }*/
+body{
+    background-color: #eff2f1;
+}
 .myCart{
     text-align: center;
     width:60%; 
     margin: auto;
+    background-color: #fefefe;
+    border-radius: 10px;
+
 }
 
 .contTrajets{
@@ -21,4 +27,28 @@
 }
 .containerTrajets{
     background-color: #f5eeee;
+}
+.trajet{
+    width:80%;
+    background-color: #f5eeee;
+    margin: 20px auto;
+
+}
+.trajet button {
+    background-color: #459e85;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+
+}
+.total button{
+    background-color: #459e85;
+    padding:10px;
+    color: #FFF;
+    border-radius: 5px;
+    margin:10px 50px;
+}
+.total p{
+        margin:0 50px;
+
 }
