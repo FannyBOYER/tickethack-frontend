@@ -16,10 +16,14 @@ fetch("http://localhost:3000/reservations/recup")
   .then((response) => response.json())
   .then((data) => {
     document.querySelector("#resultat").innerHTML = "";
+    let total = 0; 
     for (let obj of data.recup) {
       let newDiv = divTrajet(obj.trip,obj._id);
       document.querySelector("#resultat").innerHTML += newDiv;
+      total += Number(obj.trip.price);
+      document.querySelector('#total').textContent = total;
     }
+
 
     for (let button of document.querySelectorAll("#resultat button")) {
       button.addEventListener("click", () => {
@@ -49,3 +53,4 @@ fetch("http://localhost:3000/reservations/recup")
 
             } )
   })
+

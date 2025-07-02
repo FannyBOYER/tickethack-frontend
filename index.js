@@ -11,7 +11,7 @@ document.querySelector('#searchbtn').addEventListener('click', function() {
     //on exclu direct l'option ou des infos ne sont pas renseignées 
     if (!newTrip.departure || !newTrip.arrival || !newTrip.date) {
         document.querySelector('#imgresult').src ="images/notfound.png" 
-            document.querySelector('#paraphresult').textContent = "No trip found"
+        document.querySelector('#paraphresult').textContent = "No trip found"
     }
 
     //Envoi des info au back --> on execute route POST/trips
@@ -51,6 +51,8 @@ document.querySelector('#searchbtn').addEventListener('click', function() {
 })
 
 function redacTrajet(data){
+    document.querySelector('#results').innerHTML = "";
+
     for (const tab of data){
         let departure = tab.departure;
         let arrival = tab.arrival;
@@ -60,16 +62,17 @@ function redacTrajet(data){
         let dateHour = `${date.getUTCHours()}:${date.getMinutes()}`
 
         document.querySelector('#results').innerHTML +=`
-                <div id="resultat">
-                    <div class ="trajet">
-                        <p> ${departure} > ${arrival}</p>
-                        <p>${dateHour}</p>
-                        <p>${price}€</p>
-                        <button id="${id}">Book</button>
-                    </div>
-                </div> 
+                <div class ="trajet">
+                    <p> ${departure} > ${arrival}</p>
+                    <p>${dateHour}</p>
+                    <p>${price}€</p>
+                    <button id="${id}">Book</button>
+                </div>
+        
             `
     }
 }
+
+
 
 

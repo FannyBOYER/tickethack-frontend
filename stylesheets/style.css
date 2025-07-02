@@ -18,6 +18,11 @@ body {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    color: unset;
+}
+
 #resa {
     display : flex; 
     gap : 20px; 
@@ -69,7 +74,9 @@ h2 {
     justify-content: space-between;
 }
 
-#results {
+
+
+#droite {
     background-color: white;
     display : flex; 
     flex-direction: column; 
@@ -108,4 +115,9 @@ h2 {
 .trajet {
     display : flex;
     justify-content : space-between;
+}
+
+#results {
+  max-height: 400px;   /* Limite la hauteur */
+  overflow-y: auto;    /* Active le scroll vertical si besoin */
 }
