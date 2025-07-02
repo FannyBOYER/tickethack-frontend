@@ -26,8 +26,8 @@
         <div id="contenu">
             <div id="research">
                 <div>
-                    <input type="text" placeholder="Departure" class ="ville">
-                    <input type="text" placeholder="Arrival" class ="ville">
+                    <input type="text" placeholder="Departure" class ="ville" id="departure">
+                    <input type="text" placeholder="Arrival" class ="ville" id="arrival">
                 </div>
                 <div>
                     <input type="date" placeholder="23/06/2022" id="date">
@@ -38,11 +38,20 @@
             </div>
 
             <div id="results">
-                <img src="images/train.png" alt="logo de train">
-                <p>It's time to book your futur trip</p>
+                <img src="images/train.png" alt="logo de train" id="imgresult">
+                <p id="paraphresult">It's time to book your futur trip</p>
+                <div id="resultat">
+                    <div class ="trajet">
+                        <p>Paris > Lyon</p>
+                        <p>18:48</p>
+                        <p>81€</p>
+                        <button>book</button>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
-   
+   <script src="index.js"></script>
 </body>
 </html>
