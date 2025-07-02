@@ -29,7 +29,7 @@ function msToHHMM(ms) {
 
 
 
-fetch("http://localhost:3000/reservations/recup/true")
+fetch("https://tickethack-backend-tau-tan.vercel.app/reservations/recup/true")
   .then((response) => response.json())
   .then((data) => {
     console.log(data)

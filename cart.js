@@ -12,7 +12,7 @@ function divTrajet(obj,id) {
   return trajet;
 }
 
-fetch("http://localhost:3000/reservations/recup/false")
+fetch("https://tickethack-backend-tau-tan.vercel.app/reservations/recup/false")
   .then((response) => response.json())
   .then((data) => {
     document.querySelector("#resultat").innerHTML = "";
@@ -37,7 +37,7 @@ fetch("http://localhost:3000/reservations/recup/false")
     for (let button of document.querySelectorAll("#resultat button")) {
       button.addEventListener("click", () => {
         let id = button.getAttribute("id");
-        fetch(`http://localhost:3000/reservations/${id}`, {
+        fetch(`https://tickethack-backend-tau-tan.vercel.app/reservations/${id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: undefined
@@ -60,7 +60,7 @@ fetch("http://localhost:3000/reservations/recup/false")
   });
 
   document.querySelector("#purchase").addEventListener("click",()=>{
-     fetch(`http://localhost:3000/reservations/purchase`, {
+     fetch(`https://tickethack-backend-tau-tan.vercel.app/reservations/purchase`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: undefined
