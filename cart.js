@@ -45,7 +45,7 @@ fetch("http://localhost:3000/reservations/recup")
             }).then(response=>response.json())
             .then(data =>{
                 console.log(data);
-                window.location.assign("index.html");
+                window.location.assign("purchase.html");
 
             } )
   })
