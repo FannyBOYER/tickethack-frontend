@@ -69,12 +69,15 @@ h2 {
     flex-direction: column; 
     padding : 30px;
     width : 35vh;
-    margin : 10px;
+    margin-right : 80px;
     border-radius: 3%;
     justify-content: space-between;
+    margin-top : 25px;
 }
 
-
+#arrival {
+    border-top :1px solid grey
+}
 
 #droite {
     background-color: white;
@@ -82,9 +85,23 @@ h2 {
     flex-direction: column; 
     padding : 30px;
     width : 35vh; 
-    margin : 10px; 
+    margin-left : 80px; 
     text-align: center;
     border-radius: 3%;
+    margin-top : 25px;
+}
+
+#imgresult {
+    width : 100px;
+    margin : 40px;
+    margin-bottom : 70px;
+    padding : 50px;
+    border-bottom: 1px solid #4da890;
+}
+
+#paraphresult {
+    vertical-align: top;
+    display: inline-block;
 }
 
 #searchbtn {
@@ -101,15 +118,16 @@ h2 {
      border: 0;
      padding : 10px; 
      border-radius: 3%;
-     width: 90%;
+     width: 93%;
+     color : grey
 }
 
 .ville {
      background-color: #edf2f2;
      border : 0;
      border-radius: 3%;
-     padding : 10px; 
-     width: 100%;
+     padding : 11px; 
+     width: 93%;
 }
 
 .trajet {
@@ -122,3 +140,5 @@ h2 {
   max-height: 400px;   /* Limite la hauteur */
   overflow-y: auto;    /* Active le scroll vertical si besoin */
 }
+
+

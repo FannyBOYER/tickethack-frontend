@@ -15,7 +15,7 @@ document.querySelector('#searchbtn').addEventListener('click', function() {
     }
 
     //Envoi des info au back --> on execute route POST/trips
-    fetch('http://localhost:3000/trips', {
+    fetch('https://tickethack-backend-tau-tan.vercel.app/trips', {
         method : 'POST', 
         headers : {'Content-Type' : 'application/json'}, 
         body : JSON.stringify(newTrip)
@@ -38,7 +38,7 @@ document.querySelector('#searchbtn').addEventListener('click', function() {
             for (const btn of document.querySelectorAll('#results button')){
                 let idBtn = btn.getAttribute('id')
                 btn.addEventListener('click', function(){
-                    fetch(`http://localhost:3000/reservations/add/${idBtn}`)
+                    fetch(`https://tickethack-backend-tau-tan.vercel.app/reservations/add/${idBtn}`)
                     .then (response => response.json())
                     .then (data => {
                         console.log(data)
