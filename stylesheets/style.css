@@ -104,3 +104,8 @@ h2 {
      padding : 10px; 
      width: 100%;
 }
+
+.trajet {
+    display : flex;
+    justify-content : space-between;
+}
